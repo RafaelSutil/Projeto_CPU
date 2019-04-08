@@ -1,0 +1,102 @@
+C:/Users/rafae/Desktop/projeto/Instr_Reg_RISC_V.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/rafae/Desktop/projeto/Instr_Reg_RISC_V.vhd
+Model Technology ModelSim ALTERA vcom 10.3d Compiler 2014.10 Oct  7 2014
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity Instr_Reg_RISC_V
+-- Compiling architecture behavioral_arch of Instr_Reg_RISC_V
+
+} {} {}} C:/Users/rafae/Desktop/projeto/Memoria64.sv {1 {vlog -work work -sv -stats=none C:/Users/rafae/Desktop/projeto/Memoria64.sv
+Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+-- Compiling module Memoria64
+
+Top level modules:
+	Memoria64
+
+} {} {}} C:/Users/rafae/Desktop/projeto/Main.sv {1 {vlog -work work -sv -stats=none {C:\Users\rafae\Desktop\projeto\Main.sv}
+Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+-- Compiling module Main
+
+Top level modules:
+	Main
+
+} {} {}} C:/Users/rafae/Desktop/projeto/ula64.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/rafae/Desktop/projeto/ula64.vhd
+Model Technology ModelSim ALTERA vcom 10.3d Compiler 2014.10 Oct  7 2014
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Compiling entity Ula64
+-- Compiling architecture behavioral of Ula64
+
+} {} {}} C:/Users/rafae/Desktop/projeto/Deslocamento.sv {1 {vlog -work work -sv -stats=none C:/Users/rafae/Desktop/projeto/Deslocamento.sv
+Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+-- Compiling module Deslocamento
+
+Top level modules:
+	Deslocamento
+
+} {} {}} C:/Users/rafae/Desktop/projeto/ramOnChip64.v {1 {vlog -work work -stats=none C:/Users/rafae/Desktop/projeto/ramOnChip64.v
+Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+-- Compiling module ramOnChip64
+
+Top level modules:
+	ramOnChip64
+
+} {} {}} C:/Users/rafae/Desktop/projeto/ramOnChip32.v {1 {vlog -work work -stats=none C:/Users/rafae/Desktop/projeto/ramOnChip32.v
+Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+-- Compiling module ramOnChip32
+
+Top level modules:
+	ramOnChip32
+
+} {} {}} C:/Users/rafae/Desktop/projeto/register.sv {1 {vlog -work work -sv -stats=none C:/Users/rafae/Desktop/projeto/register.sv
+Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+-- Compiling module register
+
+Top level modules:
+	register
+
+} {} {}} C:/Users/rafae/Desktop/projeto/Mux5_8.sv {1 {vlog -work work -sv -stats=none C:/Users/rafae/Desktop/projeto/Mux5_8.sv
+Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+-- Compiling module Mux5_8
+
+Top level modules:
+	Mux5_8
+
+} {} {}} C:/Users/rafae/Desktop/projeto/Memoria32.sv {1 {vlog -work work -sv -stats=none C:/Users/rafae/Desktop/projeto/Memoria32.sv
+Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+-- Compiling module Memoria32
+
+Top level modules:
+	Memoria32
+
+} {} {}} C:/Users/rafae/Desktop/projeto/ControlUnit.sv {1 {vlog -work work -sv -stats=none {C:\Users\rafae\Desktop\projeto\ControlUnit.sv}
+Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+-- Compiling module ControlUnit
+
+Top level modules:
+	ControlUnit
+
+} {} {}} C:/Users/rafae/Desktop/projeto/SignExtend.sv {1 {vlog -work work -sv -stats=none C:/Users/rafae/Desktop/projeto/SignExtend.sv
+Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+-- Compiling module SignExtend
+
+Top level modules:
+	SignExtend
+
+} {} {}} C:/Users/rafae/Desktop/projeto/bancoReg.sv {1 {vlog -work work -sv -stats=none C:/Users/rafae/Desktop/projeto/bancoReg.sv
+Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+-- Compiling module bancoReg
+
+Top level modules:
+	bancoReg
+
+} {} {}} C:/Users/rafae/Desktop/projeto/Mux64_16.sv {1 {vlog -work work -sv -stats=none C:/Users/rafae/Desktop/projeto/Mux64_16.sv
+Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+-- Compiling module Mux64_16
+
+Top level modules:
+	Mux64_16
+
+} {} {}}

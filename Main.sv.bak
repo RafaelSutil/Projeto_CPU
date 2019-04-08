@@ -1,0 +1,97 @@
+`timescale 1ps/1ps
+module Main (
+	
+	
+	output logic wr, IRWrite,
+	output logic [5:0] Estado,
+	output logic [63:0] PC, PCin, Ain, Aout, Bin, Bout, Alu, AluOut, Address, WriteDataReg,
+	output logic [31:0] waddress, raddress, MemData, datain, I31_0,
+
+	output logic [4:0] I11_7, I24_20, I19_15, I14_12,
+	output logic [6:0] I6_0, I31_25
+);
+logic [3:0] count;
+logic [63:0] jmp_adr, imediato;
+logic clock, reset;
+
+//nomeDoArquivo nome (.nomeDentroDoArquivo(nomeDaqui));
+
+assign I31_25 = I31_0[31:25];
+
+//Saidas --> Entradas
+logic [63:0] ALU_A, ALU_B;
+logic [2:0] ALUOpOut;
+
+
+//UNIDADE DE CONTROLE
+logic PCWrite, AWrite, BWrite, AluOutWrite;
+logic [2:0] RegDst;
+logic [3:0] AluSrcA, AluSrcB, PCSource, MemtoReg, IorD;
+
+ControlUnit ControlUnit(
+	.clock(clock), .reset(reset),
+	.opcode(I6_0), .funct(I31_25),
+	.PCWrite(PCWrite), .IorD(IorD), .MemRead(wr), .MemtoReg(MemtoReg), .IRWrite(IRWrite),
+	.AluSrcA(AluSrcA), .RegWrite(RegWrite), .AWrite(AWrite), .BWrite(BWrite), .AluOutWrite(AluOutWrite),
+	.PCSource(PCSource), .AluSrcB(AluSrcB), .ALUOpOut(ALUOpOut), .State_out(Estado), .MDRWrite(MDRWrite)
+);
+
+
+//MEMORIA 32
+Memoria32 Memoria32(.Clk(clock), .waddress(waddress), .raddress(Address[31:0]), .Datain(datain), .Dataout(MemData), .Wr(wr));
+
+/*iord*/Mux64_16 MemMux (.in0(PC), .in1(AluOut), .sel(IorD), .out(Address));
+/*memtoreg*/Mux64_16 WriteDataMux (.in0(AluOut), .sel(MemtoReg), .out(WriteDataReg));
+//*regdst*/Mux5_8 WriteRegisterMux (.in0(I19_15)/*rs1*/, .in1(I11_7)/*rd*/, .in2(I24_20)/*rs2*/, .sel(RegDst), .out(WriteRegister));
+
+//MEMORIA 64
+
+
+//BANCO DE REG
+bancoReg bancoReg(.write(RegWrite), .clock(clock), .reset(reset), .regreader1(I19_15), .regreader2(I24_20), .regwriteaddress(I11_7), .datain(WriteDataReg), .dataout1(Ain), .dataout2(Bin));
+
+//REGISTRADOR DE INSTRUÇOES
+Instr_Reg_RISC_V InstructionRegister (.Clk(clock), .Reset(reset), .Load_ir(IRWrite), .Entrada(MemData), .Instr19_15(I19_15), .Instr24_20(I24_20), .Instr11_7(I11_7), .Instr6_0(I6_0), .Instr31_0(I31_0));
+
+//ALU
+
+
+register A_reg(.clk(clock), .reset(reset), .regWrite(AWrite), .DadoIn(Ain), .DadoOut(Aout));
+register B_reg(.clk(clock), .reset(reset), .regWrite(BWrite), .DadoIn(Bin), .DadoOut(Bout));
+
+/*alusourceA*/Mux64_16 ALU_A_Mux (.in0(PC), .in1(Aout), .sel(AluSrcA), .out(ALU_A));
+/*alusourceB*/Mux64_16 ALU_B_Mux (.in0(Bout), .in1(64'd4), .sel(AluSrcB), .out(ALU_B));
+
+ula64 ula64 (.A(ALU_A), .B(ALU_B), .Seletor(ALUOpOut), .S(Alu));
+
+register AluOut_reg (.clk(clock), .reset(reset), .regWrite(AluOutWrite), .DadoIn(Alu), .DadoOut(AluOut));
+
+
+//PC
+register PC_reg(.clk(clock), .reset(reset), .regWrite(PCWrite), .DadoIn(PCin), .DadoOut(PC));
+
+
+/*Pcsource*/Mux64_16 PC_mux (.in0(Alu), .in1(AluOut), .sel(PCSource), .out(PCin));
+
+initial begin
+		clock = 0;
+		reset = 1'b1;
+		#2;
+		reset = 0;
+		count = 10'd1000;
+		//$monitor($time, "%b %b %b %b %b %b %b %b %b %b %b %b %b", PCOutWire, PCInWire, PCWriteWire, InsMemOutWire, ALUSrcAWire, ALUSrcBWire, ALUResultWire, ALUAWire, ALUBWire, ALUFctWire);
+		while(count > 0) begin
+			if(clock) begin
+				clock = 0;
+			end
+			else begin
+				clock = 1'b1;
+			end
+		
+		#10;
+		end
+		//$finish;
+	end
+
+
+endmodule: Main

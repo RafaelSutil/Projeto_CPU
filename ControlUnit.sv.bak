@@ -1,0 +1,224 @@
+module ControlUnit (
+	input logic clock, reset,
+
+	input logic [6:0] opcode, funct,
+
+	output logic PCWrite, MemRead, IRWrite, RegWrite, AWrite, BWrite, AluOutWrite, MDRWrite,
+
+	output logic [2:0] RegDst, ALUOpOut,
+
+	output logic [3:0] IorD, PCSource, AluSrcA, AluSrcB, MemtoReg,
+	
+	output logic [5:0] State_out
+	
+	
+
+);
+
+
+
+enum logic [5:0]{
+	Fetch_Reset, Fetch_PC, Fetch_E1, Decode, // Fetch and Decode
+
+	Arit_Calc, Arit_Store,// Tipo R
+	AritImmRead,// Tipo I
+	// Tipo S
+	Branch,// Tipo SB
+	LoadImm// Tipo U
+	
+
+}state, nextState;
+
+
+enum logic [2:0]{LOAD, ADD, SUB, COMP} ALUOp;
+assign ALUOpOut = ALUOp;
+assign State_out = state;
+
+
+always_ff @(posedge clock, posedge reset)
+	if(reset) 
+		state <= Fetch_PC;
+	else
+		state <= nextState;
+
+always_comb
+	case (state)
+	
+
+	Fetch_PC: begin
+	    
+	   
+            PCWrite = 0;
+            MemRead = 1; // read
+            IRWrite = 0;
+            RegWrite = 0;
+            AWrite = 0;
+            BWrite = 0;
+            AluOutWrite = 0;
+            MDRWrite = 1;
+
+
+            IorD = 0; // PC
+            MemtoReg = 4'bxxxx;
+            RegDst = 3'bxxx;
+            PCSource = 0; // ALU
+
+
+            AluSrcA = 0; // PC
+            AluSrcB = 1; // 4
+            ALUOp = LOAD;
+
+
+
+            nextState = Fetch_E1;
+		end
+
+		Fetch_E1: begin //espera 1
+
+            PCWrite = 1;
+            MemRead = 0;
+            IRWrite = 1;
+            RegWrite = 0;
+            AWrite = 0;
+            BWrite = 0;
+            AluOutWrite = 0;
+            MDRWrite = 1;
+
+
+            IorD = 0; // PC
+            MemtoReg = 4'bxxxx;
+            RegDst = 3'bxxx;
+            PCSource = 0; // ALU
+
+
+            AluSrcA = 0; // PC
+            AluSrcB = 1; // 4
+            ALUOp = ADD;
+
+
+            nextState = Decode;
+
+
+		end
+
+	Decode: begin
+            PCWrite = 0;
+            MemRead = 0;
+            IRWrite = 0;
+            RegWrite = 0;
+            AWrite = 1;
+            BWrite = 1;
+            AluOutWrite = 0; // 
+            MDRWrite = 0;
+
+
+            IorD = 0; // PC
+            MemtoReg = 4'bxxxx;
+            RegDst = 3'bxxx;
+            PCSource = 0; // ALU
+
+
+            AluSrcA = 0; // 
+            AluSrcB = 1; // 
+
+            ALUOp = ADD;
+
+
+            case (opcode)
+            	7'b0110011:begin //arit
+            		nextState = Arit_Calc;
+            	end
+
+            	7'b0010011:begin //addi
+            		nextState = AritImmRead;
+            	end
+/*
+            	0000011:begin //ld
+
+            	end
+
+            	0100011:begin //sd
+
+            	end
+
+            	1100011, 1100111:begin //beq, bne
+            		nextState = Branch;
+            	end
+
+            	0110111: begin //lui
+            		nextState = LoadImm;
+            	end*/
+
+           
+            endcase
+        end
+
+        Arit_Calc: begin
+            PCWrite = 0;
+            MemRead = 0;
+            IRWrite = 0;
+            RegWrite = 0;
+            AWrite = 0;
+            BWrite = 0;
+            AluOutWrite = 1;
+            MDRWrite = 1'bx;
+
+
+
+            IorD = 0;
+            MemtoReg = 4'bxxxx;
+            RegDst = 3'bxxx;
+            PCSource = 0;
+
+            AluSrcA = 1;
+            AluSrcB = 0;
+
+
+            case (funct)
+            	//add
+            	7'b0000000:begin
+            		ALUOp = ADD;
+            	end
+
+            	//sub
+            	7'b0100000:begin
+            		ALUOp = SUB;
+            	end
+
+            	default : begin
+            		ALUOp = LOAD;
+            	end
+            endcase  
+		nextState =Arit_Store;
+    	
+        end
+
+        Arit_Store: begin
+            PCWrite = 0;
+            MemRead = 1'bx;
+            IRWrite = 0;
+            RegWrite = 1;
+            AWrite = 0;
+            BWrite = 0;
+            AluOutWrite = 0;
+            MDRWrite = 1'bx;
+
+
+
+            IorD = 0;
+            RegDst = 1;
+            PCSource = 0;
+
+
+            AluSrcA = 1;
+            AluSrcB = 0;
+
+            ALUOp = COMP;
+
+            MemtoReg = 0;
+
+
+			nextState = Fetch_PC;
+        end
+	endcase
+endmodule: ControlUnit

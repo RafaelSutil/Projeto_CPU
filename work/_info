@@ -1,0 +1,591 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/Users/ntsn/Documents/teste
+vbancoReg
+Z0 DXx6 sv_std 3 std 0 22 <EOTafDcUY:cQeO^ICn]m3
+Z1 !s110 1554718842
+!i10b 1
+!s100 Xh_m30ZJ=nPNCS=:6OGHS2
+I1GO@Q0OHj:oBiMTULNbfE0
+Z2 V`JN@9S9cnhjKRR_L]QIcM3
+!s105 bancoReg_sv_unit
+S1
+Z3 dC:/Users/rafae/Desktop/projeto
+Z4 w1554486061
+8C:/Users/rafae/Desktop/projeto/bancoReg.sv
+FC:/Users/rafae/Desktop/projeto/bancoReg.sv
+L0 1
+Z5 OV;L;10.3d;59
+r1
+!s85 0
+31
+!s108 1554718842.499000
+!s107 C:/Users/rafae/Desktop/projeto/bancoReg.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/rafae/Desktop/projeto/bancoReg.sv|
+!i113 1
+Z6 o-work work -sv
+nbanco@reg
+vControlUnit
+R0
+R1
+!i10b 1
+!s100 fY;cgji`DoD8^N;UiQ_P90
+I59HhGdaTAO;4>e4ijF@be2
+R2
+!s105 ControlUnit_sv_unit
+S1
+R3
+w1554710742
+8C:/Users/rafae/Desktop/projeto/ControlUnit.sv
+FC:/Users/rafae/Desktop/projeto/ControlUnit.sv
+L0 1
+R5
+r1
+!s85 0
+31
+!s108 1554718842.600000
+!s107 C:/Users/rafae/Desktop/projeto/ControlUnit.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/rafae/Desktop/projeto/ControlUnit.sv|
+!i113 1
+R6
+n@control@unit
+vDeslocamento
+R0
+R1
+!i10b 1
+!s100 EMH`UB_G1bTeiVdfJ^^>l1
+I:A7aI`TPYn9C_No3OlgZ91
+R2
+!s105 Deslocamento_sv_unit
+S1
+R3
+R4
+8C:/Users/rafae/Desktop/projeto/Deslocamento.sv
+FC:/Users/rafae/Desktop/projeto/Deslocamento.sv
+L0 1
+R5
+r1
+!s85 0
+31
+!s108 1554718842.700000
+!s107 C:/Users/rafae/Desktop/projeto/Deslocamento.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/rafae/Desktop/projeto/Deslocamento.sv|
+!i113 1
+R6
+n@deslocamento
+Einstr_reg_risc_v
+R4
+Z7 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z8 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+R3
+Z9 8C:/Users/rafae/Desktop/projeto/Instr_Reg_RISC_V.vhd
+Z10 FC:/Users/rafae/Desktop/projeto/Instr_Reg_RISC_V.vhd
+l0
+L49
+V86UmMLhZM>b1]c0NzPZ>h2
+!s100 HF;HEc4<o>]o3`Jjc=WPJ2
+Z11 OV;C;10.3d;59
+32
+R1
+!i10b 1
+Z12 !s108 1554718842.803000
+Z13 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/rafae/Desktop/projeto/Instr_Reg_RISC_V.vhd|
+Z14 !s107 C:/Users/rafae/Desktop/projeto/Instr_Reg_RISC_V.vhd|
+!i113 1
+Z15 o-work work -2002 -explicit
+Z16 tExplicit 1
+Abehavioral_arch
+R7
+R8
+DEx4 work 16 instr_reg_risc_v 0 22 86UmMLhZM>b1]c0NzPZ>h2
+l68
+L65
+VdGh>5D[bXYMDM<Xz0kQ1J0
+!s100 e?bWG@:SnkVC476;`5UQ[1
+R11
+32
+R1
+!i10b 1
+R12
+R13
+R14
+!i113 1
+R15
+R16
+vMain
+R0
+Z17 !s110 1554718843
+!i10b 1
+!s100 KPc:Q_mnlE?[3H1``d]Wn3
+I?WE?JKiVQBQEmg_fTb=Kg0
+R2
+!s105 Main_sv_unit
+S1
+R3
+w1554710059
+8C:/Users/rafae/Desktop/projeto/Main.sv
+FC:/Users/rafae/Desktop/projeto/Main.sv
+L0 2
+R5
+r1
+!s85 0
+31
+!s108 1554718843.203000
+!s107 C:/Users/rafae/Desktop/projeto/Main.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/rafae/Desktop/projeto/Main.sv|
+!i113 1
+R6
+n@main
+vMemoria32
+R0
+R17
+!i10b 1
+!s100 Q2gmKA>Pd1H;3=f[e^lb[3
+IneNCGaZB03Jl;0QL?65]T2
+R2
+!s105 Memoria32_sv_unit
+S1
+R3
+R4
+8C:/Users/rafae/Desktop/projeto/Memoria32.sv
+FC:/Users/rafae/Desktop/projeto/Memoria32.sv
+Z18 L0 26
+R5
+r1
+!s85 0
+31
+!s108 1554718843.304000
+!s107 C:/Users/rafae/Desktop/projeto/Memoria32.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/rafae/Desktop/projeto/Memoria32.sv|
+!i113 1
+R6
+n@memoria32
+vMemoria64
+R0
+R17
+!i10b 1
+!s100 1fz3Mgbi`W1QjWk]9CgUO3
+IcHI77k>h_CKC=VEgjkmDR2
+R2
+!s105 Memoria64_sv_unit
+S1
+R3
+R4
+8C:/Users/rafae/Desktop/projeto/Memoria64.sv
+FC:/Users/rafae/Desktop/projeto/Memoria64.sv
+R18
+R5
+r1
+!s85 0
+31
+!s108 1554718843.405000
+!s107 C:/Users/rafae/Desktop/projeto/Memoria64.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/rafae/Desktop/projeto/Memoria64.sv|
+!i113 1
+R6
+n@memoria64
+vMux2Inputs
+Z19 DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
+Z20 !s110 1540520273
+!i10b 1
+!s100 Xed]4kfnPIKnbzRVhQdCi3
+I1;0>U3`RLK96:]LQ2G4;L2
+Z21 VDg1SIo80bB@j0V0VzS_@n1
+!s105 Mux2Inputs_sv_unit
+S1
+Z22 dC:/Users/ntsn/Documents/projeto
+w1539571773
+8C:/Users/ntsn/Documents/projeto/Mux2Inputs.sv
+FC:/Users/ntsn/Documents/projeto/Mux2Inputs.sv
+L0 1
+Z23 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z24 !s108 1540520273.000000
+!s107 C:/Users/ntsn/Documents/projeto/Mux2Inputs.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/ntsn/Documents/projeto/Mux2Inputs.sv|
+!i113 1
+R6
+Z25 tCvgOpt 0
+n@mux2@inputs
+vMux4Inputs
+R19
+R20
+!i10b 1
+!s100 Zln0M:hdoZ95Sf:ATz:@60
+IJHeUbcISFgQ6:`ej4hOVW2
+R21
+!s105 Mux4Inputs_sv_unit
+S1
+R22
+w1540519193
+8C:/Users/ntsn/Documents/projeto/Mux4Inputs.sv
+FC:/Users/ntsn/Documents/projeto/Mux4Inputs.sv
+L0 1
+R23
+r1
+!s85 0
+31
+R24
+!s107 C:/Users/ntsn/Documents/projeto/Mux4Inputs.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/ntsn/Documents/projeto/Mux4Inputs.sv|
+!i113 1
+R6
+R25
+n@mux4@inputs
+vMux5_8
+R0
+R17
+!i10b 1
+!s100 bimC@TLZ5W<@>i@WM9Kcd0
+IW[Zo6[B4fG6QDJ4[<z@C72
+R2
+!s105 Mux5_8_sv_unit
+S1
+R3
+Z26 w1554368238
+8C:/Users/rafae/Desktop/projeto/Mux5_8.sv
+FC:/Users/rafae/Desktop/projeto/Mux5_8.sv
+L0 1
+R5
+r1
+!s85 0
+31
+!s108 1554718843.505000
+!s107 C:/Users/rafae/Desktop/projeto/Mux5_8.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/rafae/Desktop/projeto/Mux5_8.sv|
+!i113 1
+R6
+n@mux5_8
+vMux64_16
+R0
+R17
+!i10b 1
+!s100 2BTE4UYY[jCKn;RfjJn>S3
+IG3c?Ag:ae>a@MJ<O5DXL32
+R2
+!s105 Mux64_16_sv_unit
+S1
+R3
+w1554368240
+8C:/Users/rafae/Desktop/projeto/Mux64_16.sv
+FC:/Users/rafae/Desktop/projeto/Mux64_16.sv
+L0 1
+R5
+r1
+!s85 0
+31
+!s108 1554718843.606000
+!s107 C:/Users/rafae/Desktop/projeto/Mux64_16.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/rafae/Desktop/projeto/Mux64_16.sv|
+!i113 1
+R6
+n@mux64_16
+vmux_srcA
+R19
+!s110 1554213167
+!i10b 1
+!s100 <I3]mk=JC`gM5ZV8>9Q0]3
+IThDWZ4b7l=P8Ucg;zIRS<0
+R21
+!s105 mux_srcA_sv_unit
+S1
+R22
+w1554212829
+8C:/Users/ntsn/Desktop/projeto hardware/projeto de hardware-20190402T134550Z-001/projeto de hardware/Projeto/mux_srcA.sv
+FC:/Users/ntsn/Desktop/projeto hardware/projeto de hardware-20190402T134550Z-001/projeto de hardware/Projeto/mux_srcA.sv
+L0 1
+R23
+r1
+!s85 0
+31
+!s108 1554213167.000000
+!s107 C:/Users/ntsn/Desktop/projeto hardware/projeto de hardware-20190402T134550Z-001/projeto de hardware/Projeto/mux_srcA.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/ntsn/Desktop/projeto hardware/projeto de hardware-20190402T134550Z-001/projeto de hardware/Projeto/mux_srcA.sv|
+!i113 1
+R6
+R25
+nmux_src@a
+vramOnChip
+!s110 1554378511
+!i10b 1
+!s100 P4USifFT`a0_oGX`1Kg7;3
+ISMU2]nfd:_9DhHX?C1PDi1
+R21
+Z27 dC:/Users/rsp/Desktop/projeto
+Z28 w1554376963
+8C:/Users/rsp/Desktop/projeto/ramOnChip32.v
+FC:/Users/rsp/Desktop/projeto/ramOnChip32.v
+Z29 L0 40
+R23
+r1
+!s85 0
+31
+!s108 1554378511.000000
+!s107 C:/Users/rsp/Desktop/projeto/ramOnChip32.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/rsp/Desktop/projeto/ramOnChip32.v|
+!i113 1
+Z30 o-work work
+R25
+nram@on@chip
+vramOnChip32
+R17
+!i10b 1
+!s100 ?cVfgbFYaCB@4255f4cUf3
+I5L;n4UCCG^G9>nDEKYEA:1
+R2
+R3
+R4
+8C:/Users/rafae/Desktop/projeto/ramOnChip32.v
+FC:/Users/rafae/Desktop/projeto/ramOnChip32.v
+R29
+R5
+r1
+!s85 0
+31
+!s108 1554718843.706000
+!s107 C:/Users/rafae/Desktop/projeto/ramOnChip32.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/rafae/Desktop/projeto/ramOnChip32.v|
+!i113 1
+R30
+nram@on@chip32
+vramOnChip64
+R17
+!i10b 1
+!s100 cocMaFKEzGMH4F3EWeV]X1
+ICQ_U[3nT_>;SNDKVka]9:0
+R2
+R3
+R4
+8C:/Users/rafae/Desktop/projeto/ramOnChip64.v
+FC:/Users/rafae/Desktop/projeto/ramOnChip64.v
+R29
+R5
+r1
+!s85 0
+31
+!s108 1554718843.808000
+!s107 C:/Users/rafae/Desktop/projeto/ramOnChip64.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/rafae/Desktop/projeto/ramOnChip64.v|
+!i113 1
+R30
+nram@on@chip64
+vregister
+R0
+R17
+!i10b 1
+!s100 9LJ9d_BI=_PEcTcfL?O8@1
+IbLeFGnFDhUU4HHZI]b:]G2
+R2
+!s105 register_sv_unit
+S1
+R3
+R4
+8C:/Users/rafae/Desktop/projeto/register.sv
+FC:/Users/rafae/Desktop/projeto/register.sv
+L0 1
+R5
+r1
+!s85 0
+31
+!s108 1554718843.908000
+!s107 C:/Users/rafae/Desktop/projeto/register.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/rafae/Desktop/projeto/register.sv|
+!i113 1
+R6
+vShiftLeft1
+R0
+!s110 1554507351
+!i10b 1
+!s100 J5ZfmZ^DdWVTA?<RWeLLn1
+IaMUdXTf:_cg7YinXHGfFM1
+R2
+!s105 ShiftLetf1_sv_unit
+S1
+R3
+R26
+8C:/Users/rafae/Desktop/projeto/ShiftLetf1.sv
+FC:/Users/rafae/Desktop/projeto/ShiftLetf1.sv
+L0 1
+R5
+r1
+!s85 0
+31
+!s108 1554507351.622000
+!s107 C:/Users/rafae/Desktop/projeto/ShiftLetf1.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/rafae/Desktop/projeto/ShiftLetf1.sv|
+!i113 1
+R6
+n@shift@left1
+vSignExtend
+R0
+Z31 !s110 1554718844
+!i10b 1
+!s100 8;4TKcUoU8M<NWTUCYiZJ3
+Ij>fdVA>7>_Gn8SXYXBPSN1
+R2
+!s105 SignExtend_sv_unit
+S1
+R3
+w1554707630
+8C:/Users/rafae/Desktop/projeto/SignExtend.sv
+FC:/Users/rafae/Desktop/projeto/SignExtend.sv
+L0 1
+R5
+r1
+!s85 0
+31
+!s108 1554718844.412000
+!s107 C:/Users/rafae/Desktop/projeto/SignExtend.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/rafae/Desktop/projeto/SignExtend.sv|
+!i113 1
+R6
+n@sign@extend
+vsimulation
+R19
+!s110 1554382058
+!i10b 1
+!s100 K>oHEl;72b:J[j3fmjS6X3
+I9g[ZVcRU40iWZSBZB@jhZ3
+R21
+!s105 simulation_sv_unit
+S1
+R27
+R28
+8C:/Users/rsp/Desktop/projeto/simulation.sv
+FC:/Users/rsp/Desktop/projeto/simulation.sv
+L0 1
+R23
+r1
+!s85 0
+31
+!s108 1554382058.000000
+!s107 C:/Users/rsp/Desktop/projeto/simulation.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/rsp/Desktop/projeto/simulation.sv|
+!i113 1
+R6
+R25
+vUC
+R19
+!s110 1540520274
+!i10b 1
+!s100 Y`6NV2RHJ:9DjJlO?4:bd1
+IcjfURFzZf?lg8IPFA6n7?3
+R21
+!s105 UC_sv_unit
+S1
+R22
+w1540520253
+8C:/Users/ntsn/Documents/projeto/UC.sv
+FC:/Users/ntsn/Documents/projeto/UC.sv
+L0 2
+R23
+r1
+!s85 0
+31
+!s108 1540520274.000000
+!s107 C:/Users/ntsn/Documents/projeto/UC.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/ntsn/Documents/projeto/UC.sv|
+!i113 1
+R6
+R25
+n@u@c
+Eula64
+R4
+Z32 DPx4 ieee 15 std_logic_arith 0 22 [G314=:2zXJ`VORJe1J@Z1
+R7
+R8
+R3
+Z33 8C:/Users/rafae/Desktop/projeto/ula64.vhd
+Z34 FC:/Users/rafae/Desktop/projeto/ula64.vhd
+l0
+L54
+VkMXmJ1@TQ8ZGgzZFcFW]C1
+!s100 gXP0QOjWED7GdgGCHP44]0
+R11
+32
+R31
+!i10b 1
+Z35 !s108 1554718844.011000
+Z36 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/rafae/Desktop/projeto/ula64.vhd|
+Z37 !s107 C:/Users/rafae/Desktop/projeto/ula64.vhd|
+!i113 1
+R15
+R16
+Abehavioral
+R32
+R7
+R8
+DEx4 work 5 ula64 0 22 kMXmJ1@TQ8ZGgzZFcFW]C1
+l80
+L70
+VdzHmm1VZ^BU]P`ZA0Q8dB3
+!s100 DoJmkJ?1Y9Zk;7@A7oGLb2
+R11
+32
+R31
+!i10b 1
+R35
+R36
+R37
+!i113 1
+R15
+R16
+vUP
+R19
+Z38 !s110 1540520387
+!i10b 1
+!s100 o?]Tc<iX:CXnG;XX02;2N1
+IYB>zgMYkai5Z?DZbFY6501
+R21
+!s105 UP_sv_unit
+S1
+R22
+Z39 w1540520382
+Z40 8C:/Users/ntsn/Documents/projeto/UP.sv
+Z41 FC:/Users/ntsn/Documents/projeto/UP.sv
+L0 2
+R23
+r1
+!s85 0
+31
+Z42 !s108 1540520387.000000
+Z43 !s107 C:/Users/ntsn/Documents/projeto/UP.sv|
+Z44 !s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/ntsn/Documents/projeto/UP.sv|
+!i113 1
+R6
+R25
+n@u@p
+XUP_sv_unit
+R19
+R38
+!i10b 1
+!s100 [b1kBhY2U:6R3BiDJCVXE0
+IfCIj=n^nbFE4h;QQkGd];3
+VfCIj=n^nbFE4h;QQkGd];3
+!i103 1
+S1
+R22
+R39
+R40
+R41
+L0 44
+R23
+r1
+!s85 0
+31
+R42
+R43
+R44
+!i113 1
+R6
+R25
+n@u@p_sv_unit
